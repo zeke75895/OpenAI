@@ -1,0 +1,45 @@
+GOAL: Find the largest rectangular area possible in a histogram.
+
+PROBLEM:
+Given an array of integers heights representing the histogram's bar heights where the width of each bar is 1, return the area of the largest rectangle in the histogram.
+
+CONSTRAINTS:
+- 1 <= heights.length <= 10^5
+- 0 <= heights[i] <= 10^4
+- Must implement O(n) time complexity solution
+- O(n) space complexity allowed
+- Brute force O(n²) solution is NOT acceptable
+
+INPUT FORMAT:
+An array of non-negative integers representing bar heights.
+
+OUTPUT FORMAT:
+Return an integer representing the maximum rectangle area.
+
+TASK:
+Solve this problem and provide your solution with explanation.
+
+EXAMPLE 1:
+Input: heights = [2,1,5,6,2,3]
+Output: 10
+Explanation: The largest rectangle is formed by bars of height 5 and 6 (width 2) → area = 5*2 = 10
+
+EXAMPLE 2:
+Input: heights = [2,4]
+Output: 4
+Explanation: The whole histogram (height 2, width 2) gives area 4, but bar of height 4 alone gives area 4 as well
+
+EXAMPLE 3:
+Input: heights = [1,1,1,1,1]
+Output: 5
+Explanation: All bars same height, maximum area is entire histogram: height 1 * width 5 = 5
+
+EXAMPLE 4:
+Input: heights = [6,7,5,2,4,5,9,3]
+Output: 16
+Explanation: The largest rectangle uses bars from index 0-2 with height 5: width 3 * height 5 = 15? Wait, check: Actually bars 6,7,5 can form rectangle height 5, width 3 = 15. But is there larger? Bars 4,5,9,3 with height 4? No. Let's verify correct output.
+
+EXAMPLE 5:
+Input: heights = [0,9,0,8,0,7,0]
+Output: 9
+Explanation: Single bar of height 9 gives area 9

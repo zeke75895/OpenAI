@@ -1,0 +1,44 @@
+GOAL: Find how many days until warmer temperature for each day.
+
+PROBLEM:
+Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.
+
+CONSTRAINTS:
+- 1 <= temperatures.length <= 10^5
+- 30 <= temperatures[i] <= 100
+- Must implement O(n) time complexity solution
+- O(n) space complexity allowed
+
+INPUT FORMAT:
+An array of integers representing daily temperatures.
+
+OUTPUT FORMAT:
+Return an array of integers where each element represents days until warmer temperature.
+
+TASK:
+Solve this problem and provide your solution with explanation.
+
+EXAMPLE 1:
+Input: temperatures = [73,74,75,71,69,72,76,73]
+Output: [1,1,4,2,1,1,0,0]
+Explanation:
+- Day 0 (73): next warmer is day 1 (74) → wait 1 day
+- Day 1 (74): next warmer is day 2 (75) → wait 1 day
+- Day 2 (75): next warmer is day 6 (76) → wait 4 days
+- Day 3 (71): next warmer is day 5 (72) → wait 2 days
+- Day 4 (69): next warmer is day 5 (72) → wait 1 day
+- Day 5 (72): next warmer is day 6 (76) → wait 1 day
+- Day 6 (76): no warmer future day → wait 0 days
+- Day 7 (73): no warmer future day → wait 0 days
+
+EXAMPLE 2:
+Input: temperatures = [30,40,50,60]
+Output: [1,1,1,0]
+
+EXAMPLE 3:
+Input: temperatures = [30,60,90]
+Output: [1,1,0]
+
+EXAMPLE 4:
+Input: temperatures = [50,40,30,20,10]
+Output: [0,0,0,0,0]

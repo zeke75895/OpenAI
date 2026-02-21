@@ -1,0 +1,12 @@
+# Environment variables
+.env
+
+# Virtual Environment
+open-ai/
+venv/
+env/
+__pycache__/
+*.pyc
+
+# OS files
+.DS_Store

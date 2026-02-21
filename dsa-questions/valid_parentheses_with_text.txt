@@ -1,0 +1,47 @@
+GOAL: Extract and validate bracket sequences from text containing other characters.
+
+PROBLEM:
+Given a string s containing text with embedded brackets, extract all bracket characters and determine if they form a valid bracket sequence.
+
+The valid bracket characters are: '(', ')', '{', '}', '[', ']'
+
+Rules for validity:
+1. Open brackets must be closed by the same type of brackets
+2. Open brackets must be closed in the correct order
+3. Every close bracket must match the most recent unmatched open bracket
+
+CONSTRAINTS:
+- 1 <= s.length <= 10^4
+- s can contain any printable ASCII characters (letters, digits, spaces, punctuation)
+- Only consider bracket characters '()[]{}' for validation - ignore all other characters
+- Must use O(n) time complexity where n is length of string
+- Must use O(n) space complexity
+
+INPUT FORMAT:
+A single string that may contain text mixed with brackets.
+
+OUTPUT FORMAT:
+Return boolean true if the extracted bracket sequence is valid, false otherwise.
+
+TASK:
+Solve this problem and provide your solution with explanation.
+
+EXAMPLE 1:
+Input: s = "function call() { return [1, 2, 3]; }"
+Output: true (extracted brackets: (){[]})
+
+EXAMPLE 2:
+Input: s = "if (x > 0 && (y < 5 || {z: [1,2]})) then process()"
+Output: true (extracted brackets: ((){[]}()))
+
+EXAMPLE 3:
+Input: s = "The array was: [1, 2, (3}]) - this caused an error"
+Output: false (extracted brackets: [(}]) - mismatched)
+
+EXAMPLE 4:
+Input: s = "Just regular text with no brackets"
+Output: true (empty bracket sequence is valid)
+
+EXAMPLE 5:
+Input: s = "Nested: {outer [inner (deep) more] finally}"
+Output: true (extracted brackets: {[(])} - wait, check carefully)

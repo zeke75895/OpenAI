@@ -1,0 +1,39 @@
+GOAL: Determine if a string containing brackets is valid
+PROBLEM:
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+
+An input string is valid if:
+1. Open brackets must be closed by the same type of brackets
+2. Open brackets must be closed in the correct order
+3. Every close bracket has a corresponding open bracket of the same type
+CONSTRAINTS:
+- 1 <= s.length <= 10^4
+- s consists of parentheses only '()[]{}'
+- Must use O(n) time complexity where n is length of string
+- Must use O(n) space complexity (stack-based approach expected)
+INPUT FORMAT:
+A single string containing only bracket characters.
+OUTPUT FORMAT:
+Return boolean true if valid, false otherwise.
+TASK:
+Solve this problem and provide your solution with explanation.
+EXAMPLES:
+Example 1:
+Input: s = "()"
+Output: true
+
+Example 2:
+Input: s = "()[]{}"
+Output: true
+
+Example 3:
+Input: s = "(]"
+Output: false
+
+Example 4:
+Input: s = "([)]"
+Output: false
+
+Example 5:
+Input: s = "{[]}"
+Output: true

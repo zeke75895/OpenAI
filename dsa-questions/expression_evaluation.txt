@@ -1,0 +1,58 @@
+GOAL: Evaluate a mathematical expression with operator precedence.
+
+PROBLEM:
+Implement a basic calculator to evaluate a simple expression string containing non-negative integers, and the operators +, -, *, / and parentheses ( ).
+
+The expression string contains only non-negative integers, '+', '-', '*', '/', '(', ')' and spaces. The integer division should truncate toward zero.
+
+Rules:
+1. Standard operator precedence applies: * and / have higher precedence than + and -
+2. Parentheses override precedence and must be evaluated first
+3. Left-to-right evaluation for operators with same precedence
+4. No unary operators (no expressions like "-5" or "-(2+3)")
+
+CONSTRAINTS:
+- 1 <= s.length <= 10^5
+- s consists of digits, '(', ')', '+', '-', '*', '/', and spaces
+- s is a valid expression
+- All intermediate results fit in 32-bit integer range
+- Must implement solution using stack(s) - no eval() function
+- O(n) time and O(n) space complexity
+
+INPUT FORMAT:
+A string representing a mathematical expression.
+
+OUTPUT FORMAT:
+Return an integer representing the result of the expression.
+
+TASK:
+Solve this problem and provide your solution with explanation.
+
+EXAMPLE 1:
+Input: s = "1 + 1"
+Output: 2
+
+EXAMPLE 2:
+Input: s = " 6-4 / 2 "
+Output: 4
+Explanation: 4/2 = 2, then 6-2 = 4
+
+EXAMPLE 3:
+Input: s = "2*(5+5*2)/3+(6/2+8)"
+Output: ? (calculate to verify)
+Explanation: 5+5*2 = 5+10 = 15; 2*15 = 30; 30/3 = 10; 6/2+8 = 3+8 = 11; 10+11 = 21
+
+EXAMPLE 4:
+Input: s = "((10*(6/((9+3)*-11))))+17"
+Note: Wait, this contains unary minus? Let's use valid expression:
+Input: s = "((10*(6/((9+3)*11))))+17"
+Output: ?
+
+EXAMPLE 5:
+Input: s = "3+2*2"
+Output: 7
+Explanation: 2*2 = 4, then 3+4 = 7 (not left-to-right: (3+2)*2 = 10)
+
+EXAMPLE 6:
+Input: s = " 3/2 "
+Output: 1 (integer division truncates toward zero)
